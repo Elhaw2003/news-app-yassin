@@ -11,7 +11,7 @@ class AppTextStyles{
   );
   static  TextStyle titleNewsTextStyle = GoogleFonts.inter(
      color: AppColors.primaryColor,
-    fontWeight: FontWeight.w400,
+    fontWeight: FontWeight.w600,
     fontSize: 18.sp
   );
   static  TextStyle primaryColorW600Size32 = GoogleFonts.inter(
@@ -19,15 +19,14 @@ class AppTextStyles{
     fontWeight: FontWeight.w600,
     fontSize: 32.sp
   );
-  static  TextStyle cancelTextStyle = GoogleFonts.schibstedGrotesk
-  (
+  static  TextStyle cancelTextStyle = GoogleFonts.schibstedGrotesk(
      color: AppColors.purple,
     fontWeight: FontWeight.w500,
     fontSize: 14.sp
   );
-  static  TextStyle primaryColorW600Size18 = GoogleFonts.inter(
-     color: AppColors.primaryColor,
-    fontWeight: FontWeight.w600,
-    fontSize: 18.sp
+  static  TextStyle nameAndDateNews = GoogleFonts.inter(
+     color: AppColors.grey,
+    fontWeight: FontWeight.w400,
+    fontSize: 12.sp
   );
 }

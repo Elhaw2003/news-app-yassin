@@ -25,7 +25,7 @@ class CustomTextFieldWidget extends StatelessWidget {
         filled: true,
         fillColor: AppColors.white,
         hintText: hintText,
-        hintStyle: AppTextStyles.primaryColorW600Size18.copyWith(fontSize: 12.sp),
+        hintStyle: AppTextStyles.titleNewsTextStyle.copyWith(fontSize: 12.sp),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(8.r),
           borderSide: const BorderSide(color: AppColors.borderTextFieldColor,width: 1)
