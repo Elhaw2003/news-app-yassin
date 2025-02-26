@@ -6,3 +6,6 @@ abstract class Failure{
 class ApiFailure extends Failure{
   ApiFailure({required super.errorMessage});
 }
+class NoInterNet extends Failure{
+  NoInterNet({required super.errorMessage});
+}

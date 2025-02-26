@@ -6,5 +6,7 @@
   "entertainment": "ترفيه",
   "cancel": "إلغاء",
   "search_results": "نتيجه الابحاث",
-  "error_occurred": "حدث خطأ"
+  "error_occurred": "حدث خطأ",
+  "no_internet": "لا يوجد اتصال بالإنترنت",
+  "date_not_available": "تاريخ غير متوفر"
 }

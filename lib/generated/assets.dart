@@ -2,7 +2,33 @@
 class Assets {
   Assets._();
 
+  static const String coreRoutingRouterGenerationConfig = 'lib/core/routing/router_generation_config.dart~';
+  static const String coreWidgetsLoadingWidget = 'lib/core/widgets/loading_widget.dart~';
+  static const String errorsFailure = 'lib/core/errors/failure.dart';
+  static const String generatedAssets = 'lib/generated/assets.dart';
+  static const String libMain = 'lib/main.dart';
+  static const String modelsCategoryModel = 'lib/features/home/data/models/category_model.dart';
+  static const String modelsTopHeadLineModel = 'lib/features/home/data/models/top_head_line_model.dart';
+  static const String routingAppRoutes = 'lib/core/routing/app_routes.dart';
+  static const String routingRouterGenerationConfig = 'lib/core/routing/router_generation_config.dart';
+  static const String topHeadLinesRepoTopHeadLinesRepo = 'lib/features/home/data/repo/top_head_lines_repo/top_head_lines_repo.dart';
+  static const String topHeadLinesRepoTopHeadLinesRepoImplementation = 'lib/features/home/data/repo/top_head_lines_repo/top_head_lines_repo_implementation.dart';
+  static const String topHeadLinesTopHeadLinesCubit = 'lib/features/home/presentation/controller/top_head_lines/top_head_lines_cubit.dart';
+  static const String topHeadLinesTopHeadLinesState = 'lib/features/home/presentation/controller/top_head_lines/top_head_lines_state.dart';
   static const String translationsAr = 'assets/translations/ar.json';
   static const String translationsEn = 'assets/translations/en.json';
+  static const String utiliesAppColors = 'lib/core/utilies/app_colors.dart';
+  static const String utiliesAppStyles = 'lib/core/utilies/app_styles.dart';
+  static const String utiliesEndPoints = 'lib/core/utilies/end_points.dart';
+  static const String viewHomeScreen = 'lib/features/home/presentation/view/home_screen.dart';
+  static const String widgetsArticleViewWidget = 'lib/features/home/presentation/view/widgets/article_view_widget.dart';
+  static const String widgetsCategoryViewWidget = 'lib/features/home/presentation/view/widgets/category_view_widget.dart';
+  static const String widgetsCustomTextFieldWidget = 'lib/core/widgets/custom_text_field_widget.dart';
+  static const String widgetsFailureWidget = 'lib/core/widgets/failure_widget.dart';
+  static const String widgetsHomeAppBar = 'lib/features/home/presentation/view/widgets/home_app_bar.dart';
+  static const String widgetsHomeBody = 'lib/features/home/presentation/view/widgets/home_body.dart';
+  static const String widgetsLoadingWidget = 'lib/core/widgets/loading_widget.dart';
+  static const String widgetsSpacingWidget = 'lib/core/widgets/spacing_widget.dart';
+  static const String widgetsTopHeadLineWidget = 'lib/features/home/presentation/view/widgets/top_head_line_widget.dart';
 
 }

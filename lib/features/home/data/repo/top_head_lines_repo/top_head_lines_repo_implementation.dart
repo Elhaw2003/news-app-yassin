@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:io';
 
 import 'package:dartz/dartz.dart';
 import 'package:easy_localization/easy_localization.dart';
@@ -13,17 +14,24 @@ class TopHeadLinesRepoImplementation implements TopHeadLinesRepo{
     // TODO: implement getTopHeadLines
     try{
       var response = await http.get(Uri.parse("${EndPoints.baseUrl}${EndPoints.topHeadLines}?${EndPoints.country}=us&apiKey=${EndPoints.apiKey}"));
-      List bodyJson = jsonDecode(response.body);
+      var bodyJson = jsonDecode(response.body);
+      List<TopHeadLineModel> topHeadLineList = [];
       if(response.statusCode == 200){
-        List<TopHeadLineModel> topHeadLines = bodyJson.map((e) => TopHeadLineModel.fromJson(e),).toList();
-        return right(topHeadLines);
+        for(var item in bodyJson["articles"]){
+          TopHeadLineModel topHeadLineModel = TopHeadLineModel.fromJson(item);
+          topHeadLineList.add(topHeadLineModel);
+        }
+        return right(topHeadLineList);
       }
       else{
         return left( ApiFailure(errorMessage: jsonDecode(response.body)["message"]));
       }
     }
-    catch(e){
-      return left(ApiFailure(errorMessage: "error_occurred".tr()));
+    on SocketException{
+      return left(NoInterNet(errorMessage: "no_internet".tr()));
+    }
+    catch (e){
+      return left(ApiFailure(errorMessage: e.toString()));
     }
   }
 

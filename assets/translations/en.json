@@ -6,5 +6,7 @@
   "entertainment": "Entertainment",
   "cancel": "Cancel",
   "search_results": "Search results",
-  "error_occurred": "Error Occurred"
+  "error_occurred": "Error Occurred",
+  "no_internet": "No internet connection",
+  "date_not_available": "Date not available"
 }
