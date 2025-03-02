@@ -4,15 +4,18 @@ class Assets {
 
   static const String categoriesCategoriesCubit = 'lib/features/home/presentation/controller/categories/categories_cubit.dart';
   static const String categoriesCategoriesState = 'lib/features/home/presentation/controller/categories/categories_state.dart';
-  static const String coreRoutingRouterGenerationConfig = 'lib/core/routing/router_generation_config.dart~';
   static const String coreWidgetsLoadingWidget = 'lib/core/widgets/loading_widget.dart~';
   static const String errorsFailure = 'lib/core/errors/failure.dart';
   static const String generatedAssets = 'lib/generated/assets.dart';
   static const String libMain = 'lib/main.dart';
   static const String modelsCategoryModel = 'lib/features/home/data/models/category_model.dart';
   static const String modelsTopHeadLineModel = 'lib/features/home/data/models/top_head_line_model.dart';
+  static const String reposSearchRepo = 'lib/features/search/data/repos/search_repo.dart';
+  static const String reposSearchRepoImplementation = 'lib/features/search/data/repos/search_repo_implementation.dart';
   static const String routingAppRoutes = 'lib/core/routing/app_routes.dart';
   static const String routingRouterGenerationConfig = 'lib/core/routing/router_generation_config.dart';
+  static const String searchSearchCubit = 'lib/features/search/presentation/controller/search/search_cubit.dart';
+  static const String searchSearchState = 'lib/features/search/presentation/controller/search/search_state.dart';
   static const String topHeadLinesRepoTopHeadLinesRepo = 'lib/features/home/data/repo/top_head_lines_repo/top_head_lines_repo.dart';
   static const String topHeadLinesRepoTopHeadLinesRepoImplementation = 'lib/features/home/data/repo/top_head_lines_repo/top_head_lines_repo_implementation.dart';
   static const String topHeadLinesTopHeadLinesCubit = 'lib/features/home/presentation/controller/top_head_lines/top_head_lines_cubit.dart';
@@ -23,6 +26,7 @@ class Assets {
   static const String utiliesAppStyles = 'lib/core/utilies/app_styles.dart';
   static const String utiliesEndPoints = 'lib/core/utilies/end_points.dart';
   static const String viewHomeScreen = 'lib/features/home/presentation/view/home_screen.dart';
+  static const String viewSearchScreen = 'lib/features/search/presentation/view/search_screen.dart';
   static const String viewWidgetsFirstItemTopHeadLineWidget = 'lib/features/home/presentation/view/widgets/first_item_top_head_line_widget.dart~';
   static const String widgetsArticleItemWidget = 'lib/features/home/presentation/view/widgets/article_item_widget.dart';
   static const String widgetsCategoryItemWidget = 'lib/features/home/presentation/view/widgets/category_item_widget.dart';
@@ -34,6 +38,8 @@ class Assets {
   static const String widgetsHomeAppBar = 'lib/features/home/presentation/view/widgets/home_app_bar.dart';
   static const String widgetsHomeBody = 'lib/features/home/presentation/view/widgets/home_body.dart';
   static const String widgetsLoadingWidget = 'lib/core/widgets/loading_widget.dart';
+  static const String widgetsSearchBody = 'lib/features/search/presentation/view/widgets/search_body.dart';
+  static const String widgetsSearchTextFieldWidget = 'lib/features/search/presentation/view/widgets/search_text_field_widget.dart';
   static const String widgetsSpacingWidget = 'lib/core/widgets/spacing_widget.dart';
   static const String widgetsTopHeadLineWidget = 'lib/features/home/presentation/view/widgets/top_head_line_widget.dart';
 

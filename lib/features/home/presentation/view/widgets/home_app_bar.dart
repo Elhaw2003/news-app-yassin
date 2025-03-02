@@ -1,6 +1,8 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
+import 'package:news_app_yassin/core/routing/app_routes.dart';
 import 'package:news_app_yassin/core/utilies/app_colors.dart';
 import 'package:news_app_yassin/core/utilies/app_styles.dart';
 class HomeAppBar extends StatelessWidget {
@@ -17,7 +19,9 @@ class HomeAppBar extends StatelessWidget {
       ),
       actions: [
         IconButton(
-            onPressed: (){},
+            onPressed: (){
+             GoRouter.of(context).pushNamed(AppRoutes.searchScreen);
+            },
             icon: Icon(Icons.search,size: 16.sp,color: AppColors.primaryColor,)
         ),
       ],

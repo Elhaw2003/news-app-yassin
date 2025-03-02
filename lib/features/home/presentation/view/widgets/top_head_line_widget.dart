@@ -26,8 +26,10 @@ class TopHeadLineWidget extends StatelessWidget {
             children: [
                FirstItemTopHeadLineWidget(topHeadLines: topHeadLinesCubit.topHeadLines),
               const HeightSpacing(height: 24),
-              CustomArticleViewWidget(
-                topHeadLineList: topHeadLinesCubit.topHeadLines,
+              Expanded(
+                child: CustomArticleViewWidget(
+                  list: topHeadLinesCubit.topHeadLines,
+                ),
               ),
             ],
           ),

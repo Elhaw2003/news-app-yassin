@@ -4,35 +4,32 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../utilies/app_colors.dart';
 import '../utilies/app_styles.dart';
 class CustomTextFieldWidget extends StatelessWidget {
-  const CustomTextFieldWidget({super.key, required this.hintText, required this.controller, this.validator, this.keyboardType, this.minLines =1, this.maxLines=1});
+  const CustomTextFieldWidget({super.key, required this.hintText,  this.validator, this.keyboardType, this.onFieldSubmitted});
   final String hintText;
-  final int minLines;
-  final int maxLines;
+  final void Function(String)? onFieldSubmitted;
   final String? Function(String?)? validator;
-  final TextEditingController controller;
   final TextInputType? keyboardType;
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      minLines: minLines,
-      maxLines: maxLines,
       keyboardType: keyboardType ?? TextInputType.text,
       validator: validator,
-      controller: controller,
+      onFieldSubmitted: onFieldSubmitted,
       cursorColor: AppColors.primaryColor,
       decoration: InputDecoration(
+        prefixIcon: Icon(Icons.search_outlined,color: AppColors.grey,size: 15.sp,),
         contentPadding: EdgeInsets.symmetric(horizontal: 18.w,vertical: 18.h),
         filled: true,
-        fillColor: AppColors.white,
+        fillColor: AppColors.fillTextFieldColor,
         hintText: hintText,
-        hintStyle: AppTextStyles.titleNewsTextStyle.copyWith(fontSize: 12.sp),
+        hintStyle: AppTextStyles.nameAndDateNews,
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(8.r),
-          borderSide: const BorderSide(color: AppColors.borderTextFieldColor,width: 1)
+          borderSide: BorderSide(color: AppColors.primaryColor.withOpacity(0.3),width: 1)
         ),
         focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(8.r),
-            borderSide: const BorderSide(color: AppColors.primaryColor,width: 1)
+            borderSide: const BorderSide(color: AppColors.enabledBorderTextFieldColor,width: 1)
         ),
         errorBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(8.r),
