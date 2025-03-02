@@ -4,4 +4,5 @@ class EndPoints{
   static const String apiKey = "7f9e33aa93ff41328ba6eaa1696ae2c0";
   static const String topHeadLines = "top-headlines";
   static const String country = "country";
+  static const String category = "category";
 }

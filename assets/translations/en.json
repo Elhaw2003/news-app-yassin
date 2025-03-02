@@ -1,6 +1,6 @@
 {
   "explore": "Explore",
-  "travel": "Travel",
+  "sports": "Sports",
   "technology": "Technology",
   "business": "Business",
   "entertainment": "Entertainment",
@@ -8,5 +8,6 @@
   "search_results": "Search results",
   "error_occurred": "Error Occurred",
   "no_internet": "No internet connection",
-  "date_not_available": "Date not available"
+  "date_not_available": "Date not available",
+  "no_results_found": "No results found"
 }

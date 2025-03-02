@@ -2,6 +2,8 @@
 class Assets {
   Assets._();
 
+  static const String categoriesCategoriesCubit = 'lib/features/home/presentation/controller/categories/categories_cubit.dart';
+  static const String categoriesCategoriesState = 'lib/features/home/presentation/controller/categories/categories_state.dart';
   static const String coreRoutingRouterGenerationConfig = 'lib/core/routing/router_generation_config.dart~';
   static const String coreWidgetsLoadingWidget = 'lib/core/widgets/loading_widget.dart~';
   static const String errorsFailure = 'lib/core/errors/failure.dart';
@@ -21,10 +23,14 @@ class Assets {
   static const String utiliesAppStyles = 'lib/core/utilies/app_styles.dart';
   static const String utiliesEndPoints = 'lib/core/utilies/end_points.dart';
   static const String viewHomeScreen = 'lib/features/home/presentation/view/home_screen.dart';
-  static const String widgetsArticleViewWidget = 'lib/features/home/presentation/view/widgets/article_view_widget.dart';
+  static const String viewWidgetsFirstItemTopHeadLineWidget = 'lib/features/home/presentation/view/widgets/first_item_top_head_line_widget.dart~';
+  static const String widgetsArticleItemWidget = 'lib/features/home/presentation/view/widgets/article_item_widget.dart';
+  static const String widgetsCategoryItemWidget = 'lib/features/home/presentation/view/widgets/category_item_widget.dart';
   static const String widgetsCategoryViewWidget = 'lib/features/home/presentation/view/widgets/category_view_widget.dart';
+  static const String widgetsCustomArticleViewWidget = 'lib/core/widgets/custom_article_view_widget.dart';
   static const String widgetsCustomTextFieldWidget = 'lib/core/widgets/custom_text_field_widget.dart';
   static const String widgetsFailureWidget = 'lib/core/widgets/failure_widget.dart';
+  static const String widgetsFirstItemTopHeadLineWidget = 'lib/features/home/presentation/view/widgets/first_item_top_head_line_widget.dart';
   static const String widgetsHomeAppBar = 'lib/features/home/presentation/view/widgets/home_app_bar.dart';
   static const String widgetsHomeBody = 'lib/features/home/presentation/view/widgets/home_body.dart';
   static const String widgetsLoadingWidget = 'lib/core/widgets/loading_widget.dart';

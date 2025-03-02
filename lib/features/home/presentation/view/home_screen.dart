@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:news_app_yassin/features/home/presentation/view/widgets/home_app_bar.dart';
@@ -15,7 +16,9 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   void initState() {
     // TODO: implement initState
-    BlocProvider.of<TopHeadLinesCubit>(context).getTopHeadlines();
+    BlocProvider.of<TopHeadLinesCubit>(context).getTopHeadlines(
+      category: "sports".tr()
+    );
   }
   @override
   Widget build(BuildContext context) {

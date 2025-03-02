@@ -10,17 +10,13 @@ import 'package:news_app_yassin/features/home/data/repo/top_head_lines_repo/top_
 import'package:http/http.dart' as http;
 class TopHeadLinesRepoImplementation implements TopHeadLinesRepo{
   @override
-  Future<Either<Failure, List<TopHeadLineModel>>> getTopHeadLines() async{
+  Future<Either<Failure, List<TopHeadLineModel>>> getTopHeadLines({required String category}) async{
     // TODO: implement getTopHeadLines
     try{
-      var response = await http.get(Uri.parse("${EndPoints.baseUrl}${EndPoints.topHeadLines}?${EndPoints.country}=us&apiKey=${EndPoints.apiKey}"));
+      var response = await http.get(Uri.parse("${EndPoints.baseUrl}${EndPoints.topHeadLines}?${EndPoints.category}=$category&apiKey=${EndPoints.apiKey}"));
       var bodyJson = jsonDecode(response.body);
-      List<TopHeadLineModel> topHeadLineList = [];
       if(response.statusCode == 200){
-        for(var item in bodyJson["articles"]){
-          TopHeadLineModel topHeadLineModel = TopHeadLineModel.fromJson(item);
-          topHeadLineList.add(topHeadLineModel);
-        }
+        List<TopHeadLineModel> topHeadLineList = (bodyJson["articles"] as List).map((e) => TopHeadLineModel.fromJson(e)).toList();
         return right(topHeadLineList);
       }
       else{
