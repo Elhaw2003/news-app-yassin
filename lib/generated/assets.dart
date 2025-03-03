@@ -25,14 +25,17 @@ class Assets {
   static const String utiliesAppColors = 'lib/core/utilies/app_colors.dart';
   static const String utiliesAppStyles = 'lib/core/utilies/app_styles.dart';
   static const String utiliesEndPoints = 'lib/core/utilies/end_points.dart';
+  static const String viewArticleDetailsScreen = 'lib/features/article_details/presentation/view/article_details_screen.dart';
   static const String viewHomeScreen = 'lib/features/home/presentation/view/home_screen.dart';
   static const String viewSearchScreen = 'lib/features/search/presentation/view/search_screen.dart';
   static const String viewWidgetsFirstItemTopHeadLineWidget = 'lib/features/home/presentation/view/widgets/first_item_top_head_line_widget.dart~';
+  static const String widgetsArticleDetailsBody = 'lib/features/article_details/presentation/view/widgets/article_details_body.dart';
   static const String widgetsArticleItemWidget = 'lib/features/home/presentation/view/widgets/article_item_widget.dart';
   static const String widgetsCategoryItemWidget = 'lib/features/home/presentation/view/widgets/category_item_widget.dart';
   static const String widgetsCategoryViewWidget = 'lib/features/home/presentation/view/widgets/category_view_widget.dart';
   static const String widgetsCustomArticleViewWidget = 'lib/core/widgets/custom_article_view_widget.dart';
   static const String widgetsCustomTextFieldWidget = 'lib/core/widgets/custom_text_field_widget.dart';
+  static const String widgetsDetailsItemWidget = 'lib/features/article_details/presentation/view/widgets/details_item_widget.dart';
   static const String widgetsFailureWidget = 'lib/core/widgets/failure_widget.dart';
   static const String widgetsFirstItemTopHeadLineWidget = 'lib/features/home/presentation/view/widgets/first_item_top_head_line_widget.dart';
   static const String widgetsHomeAppBar = 'lib/features/home/presentation/view/widgets/home_app_bar.dart';

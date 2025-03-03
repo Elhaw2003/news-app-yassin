@@ -29,4 +29,9 @@ class AppTextStyles{
     fontWeight: FontWeight.w400,
     fontSize: 12.sp
   );
+  static  TextStyle descriptionStyle = GoogleFonts.merriweather(
+     color: AppColors.primaryColor,
+    fontWeight: FontWeight.w400,
+    fontSize: 16.sp
+  );
 }
