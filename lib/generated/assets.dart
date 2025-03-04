@@ -7,6 +7,8 @@ class Assets {
   static const String coreWidgetsLoadingWidget = 'lib/core/widgets/loading_widget.dart~';
   static const String errorsFailure = 'lib/core/errors/failure.dart';
   static const String generatedAssets = 'lib/generated/assets.dart';
+  static const String languageLanguageCubit = 'lib/features/search/presentation/controller/language/language_cubit.dart';
+  static const String languageLanguageState = 'lib/features/search/presentation/controller/language/language_state.dart';
   static const String libMain = 'lib/main.dart';
   static const String modelsCategoryModel = 'lib/features/home/data/models/category_model.dart';
   static const String modelsTopHeadLineModel = 'lib/features/home/data/models/top_head_line_model.dart';
@@ -25,6 +27,7 @@ class Assets {
   static const String utiliesAppColors = 'lib/core/utilies/app_colors.dart';
   static const String utiliesAppStyles = 'lib/core/utilies/app_styles.dart';
   static const String utiliesEndPoints = 'lib/core/utilies/end_points.dart';
+  static const String utiliesLanguageConst = 'lib/core/utilies/language_const.dart';
   static const String viewArticleDetailsScreen = 'lib/features/article_details/presentation/view/article_details_screen.dart';
   static const String viewHomeScreen = 'lib/features/home/presentation/view/home_screen.dart';
   static const String viewSearchScreen = 'lib/features/search/presentation/view/search_screen.dart';

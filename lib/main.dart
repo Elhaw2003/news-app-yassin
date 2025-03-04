@@ -6,6 +6,9 @@ import 'package:news_app_yassin/core/routing/router_generation_config.dart';
 import 'package:news_app_yassin/features/home/data/repo/top_head_lines_repo/top_head_lines_repo_implementation.dart';
 import 'package:news_app_yassin/features/home/presentation/controller/categories/categories_cubit.dart';
 import 'package:news_app_yassin/features/home/presentation/controller/top_head_lines/top_head_lines_cubit.dart';
+import 'package:news_app_yassin/features/search/presentation/controller/language/language_cubit.dart';
+
+import 'core/utilies/language_const.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await EasyLocalization.ensureInitialized();
@@ -14,7 +17,7 @@ void main() async {
         supportedLocales: const [Locale('en'), Locale('ar')],
         path: 'assets/translations', // <-- change the path of the translation files
         fallbackLocale: const Locale('en'),
-        startLocale: const Locale('en'),
+        startLocale:  Locale(LanguageConsts.currentLanguage),
         child:
              MultiBlocProvider(
                providers: [
@@ -22,6 +25,8 @@ void main() async {
                  create: (context) => TopHeadLinesCubit(topHeadLinesRepo: TopHeadLinesRepoImplementation())),
                  BlocProvider(
                  create: (context) => CategoriesCubit()),
+                 BlocProvider(
+                 create: (context) => LanguageCubit()),
                ],
                  child: const NewsAppYassin()
              ),

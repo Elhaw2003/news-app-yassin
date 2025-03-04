@@ -35,7 +35,7 @@ class CategoryViewWidget extends StatelessWidget {
                   index: index,
                     onTap: () {
                       BlocProvider.of<CategoriesCubit>(context).changeIndex(index);
-                      BlocProvider.of<TopHeadLinesCubit>(context).getTopHeadlines(category: categories[index].text);
+                      BlocProvider.of<TopHeadLinesCubit>(context).getTopHeadlines(category: categories[index].text,index: index);
                     },
                     text: categories[index].text
                 );

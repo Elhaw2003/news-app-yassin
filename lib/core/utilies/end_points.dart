@@ -5,4 +5,5 @@ class EndPoints{
   static const String topHeadLines = "top-headlines";
   static const String everything = "everything";
   static const String category = "category";
+  static const String language = "language";
 }

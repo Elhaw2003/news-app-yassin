@@ -20,14 +20,14 @@ class TopHeadLinesRepoImplementation implements TopHeadLinesRepo{
         return right(topHeadLineList);
       }
       else{
-        return left( ApiFailure(errorMessage: jsonDecode(response.body)["message"]));
+        return left(ApiFailure(errorMessage: jsonDecode(response.body)["message"]));
       }
     }
     on SocketException{
       return left(NoInterNet(errorMessage: "no_internet".tr()));
     }
     catch (e){
-      return left(ApiFailure(errorMessage: e.toString()));
+      return left(ApiFailure(errorMessage: "error_occurred".tr()));
     }
   }
 
