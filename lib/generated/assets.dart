@@ -10,6 +10,7 @@ class Assets {
   static const String languageLanguageCubit = 'lib/features/search/presentation/controller/language/language_cubit.dart';
   static const String languageLanguageState = 'lib/features/search/presentation/controller/language/language_state.dart';
   static const String libMain = 'lib/main.dart';
+  static const String lottieLoading = 'assets/lottie/loading.json';
   static const String modelsCategoryModel = 'lib/features/home/data/models/category_model.dart';
   static const String modelsTopHeadLineModel = 'lib/features/home/data/models/top_head_line_model.dart';
   static const String reposSearchRepo = 'lib/features/search/data/repos/search_repo.dart';
