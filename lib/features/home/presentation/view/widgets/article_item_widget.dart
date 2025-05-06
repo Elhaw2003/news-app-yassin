@@ -56,13 +56,16 @@ class ArticleItemWidget extends StatelessWidget {
             ),
             ClipRRect(
               borderRadius: BorderRadius.circular(8.sp),
-              child: CachedNetworkImage(
-                imageUrl: topHeadLineModel.imageUrl,
-                placeholder: (context, url) => const LoadingWidget(),
-                errorWidget: (context, url, error) => const Icon(Icons.error),
-                width: 112.w,
-                height: 80.h,
-                fit: BoxFit.fill,
+              child: Hero(
+                tag: topHeadLineModel.imageUrl,
+                child: CachedNetworkImage(
+                  imageUrl: topHeadLineModel.imageUrl,
+                  placeholder: (context, url) => const LoadingWidget(),
+                  errorWidget: (context, url, error) => const Icon(Icons.error),
+                  width: 112.w,
+                  height: 80.h,
+                  fit: BoxFit.fill,
+                ),
               ),
             ),
           ],

@@ -14,6 +14,7 @@ class HomeAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      surfaceTintColor: Colors.transparent,
       backgroundColor: AppColors.lightBlueColor,
       toolbarHeight: 120.h,
       title: Text(

@@ -40,12 +40,14 @@ class Assets {
   static const String widgetsCategoryItemWidget = 'lib/features/home/presentation/view/widgets/category_item_widget.dart';
   static const String widgetsCategoryViewWidget = 'lib/features/home/presentation/view/widgets/category_view_widget.dart';
   static const String widgetsCustomArticleViewWidget = 'lib/core/widgets/custom_article_view_widget.dart';
+  static const String widgetsCustomShimmerContainerWidget = 'lib/core/widgets/custom_shimmer_container_widget.dart';
   static const String widgetsCustomTextFieldWidget = 'lib/core/widgets/custom_text_field_widget.dart';
   static const String widgetsDetailsItemWidget = 'lib/features/article_details/presentation/view/widgets/details_item_widget.dart';
   static const String widgetsFailureWidget = 'lib/core/widgets/failure_widget.dart';
   static const String widgetsFirstItemTopHeadLineWidget = 'lib/features/home/presentation/view/widgets/first_item_top_head_line_widget.dart';
   static const String widgetsHomeAppBar = 'lib/features/home/presentation/view/widgets/home_app_bar.dart';
   static const String widgetsHomeBody = 'lib/features/home/presentation/view/widgets/home_body.dart';
+  static const String widgetsHomeShimmerWidget = 'lib/features/home/presentation/view/widgets/home_shimmer_widget.dart';
   static const String widgetsLoadingWidget = 'lib/core/widgets/loading_widget.dart';
   static const String widgetsSearchBody = 'lib/features/search/presentation/view/widgets/search_body.dart';
   static const String widgetsSearchTextFieldWidget = 'lib/features/search/presentation/view/widgets/search_text_field_widget.dart';

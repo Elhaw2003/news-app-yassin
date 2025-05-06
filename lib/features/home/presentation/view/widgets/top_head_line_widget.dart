@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:news_app_yassin/features/home/presentation/controller/top_head_lines/top_head_lines_state.dart';
 import 'package:news_app_yassin/features/home/presentation/view/widgets/first_item_top_head_line_widget.dart';
+import 'package:news_app_yassin/features/home/presentation/view/widgets/home_shimmer_widget.dart';
 import '../../../../../core/widgets/custom_article_view_widget.dart';
 import '../../../../../core/widgets/failure_widget.dart';
 import '../../../../../core/widgets/loading_widget.dart';
@@ -19,7 +20,7 @@ class TopHeadLineWidget extends StatelessWidget {
         return
         Expanded(
           child: state is TopHeadLinesLoading ?
-          const Center(child: LoadingWidget()) :
+          const HomeShimmerWidget():
           state is TopHeadLinesFailure ?
           Center(child: FailureWidget(text: state.errorMessage,))   :
           Column(

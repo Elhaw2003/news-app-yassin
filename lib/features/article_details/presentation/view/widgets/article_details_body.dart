@@ -15,13 +15,16 @@ class ArticleDetailsBody extends StatelessWidget {
       clipBehavior: Clip.none,
       children: [
         ClipRRect(
-          child: CachedNetworkImage(
-            imageUrl: topHeadLineModel.imageUrl ,
-            placeholder: (context, url) => const LoadingWidget(),
-            errorWidget: (context, url, error) => const Icon(Icons.error),
-            width: double.infinity,
-            height: 316.h,
-            fit: BoxFit.fill,
+          child: Hero(
+            tag: topHeadLineModel.imageUrl,
+            child: CachedNetworkImage(
+              imageUrl: topHeadLineModel.imageUrl ,
+              placeholder: (context, url) => const LoadingWidget(),
+              errorWidget: (context, url, error) => const Icon(Icons.error),
+              width: double.infinity,
+              height: 316.h,
+              fit: BoxFit.fill,
+            ),
           ),
         ),
         Positioned(

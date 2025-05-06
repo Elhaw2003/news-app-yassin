@@ -7,14 +7,14 @@ import 'package:news_app_yassin/features/home/presentation/controller/categories
 import 'package:news_app_yassin/features/home/presentation/controller/top_head_lines/top_head_lines_cubit.dart';
 import 'package:news_app_yassin/features/home/presentation/view/widgets/category_item_widget.dart';
 
+import '../../../../../core/widgets/spacing_widget.dart';
+
 class CategoryViewWidget extends StatelessWidget {
   const CategoryViewWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
-    // ✅ جعل BlocBuilder يعيد البناء عند تغيير اللغة
     final locale = EasyLocalization.of(context)?.locale;
-
     return BlocBuilder<CategoriesCubit, CategoriesState>(
       buildWhen: (previous, current) {
         return true; // إعادة بناء الواجهة دائمًا عند أي تحديث
@@ -31,7 +31,8 @@ class CategoryViewWidget extends StatelessWidget {
           height: 40.h,
           child: Padding(
             padding: EdgeInsetsDirectional.only(start: 32.w),
-            child: ListView.builder(
+            child: ListView.separated(
+              separatorBuilder: (context, index) => const WidthSpacing(width: 10),
               itemCount: categories.length,
               scrollDirection: Axis.horizontal,
               physics: const BouncingScrollPhysics(),
@@ -43,7 +44,7 @@ class CategoryViewWidget extends StatelessWidget {
                     BlocProvider.of<TopHeadLinesCubit>(context)
                         .getTopHeadlines(category: categories[index].text, index: index);
                   },
-                  text: categories[index].text, // ✅ سيتم تحديث النصوص فور تغيير اللغة
+                  text: categories[index].text,
                 );
               },
             ),
