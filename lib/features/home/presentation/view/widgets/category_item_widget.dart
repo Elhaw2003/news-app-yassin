@@ -16,6 +16,8 @@ class CategoryItemWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
+      splashFactory: NoSplash.splashFactory,
+      highlightColor: Colors.transparent,
       onTap: onTap,
       child: Container(
         padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 6.h),
@@ -28,7 +30,7 @@ class CategoryItemWidget extends StatelessWidget {
           border: Border.all(color: AppColors.lightBlueColor.withOpacity(0.1), width: 1.sp),
         ),
         child: Text(
-          text.tr(), // ✅ الآن `tr()` يتم استدعاؤه هنا مما يضمن التحديث الفوري
+          text.tr(),
           style: AppTextStyles.categoryTextStyle,
         ),
       ),
