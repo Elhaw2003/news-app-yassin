@@ -4,15 +4,17 @@ class Assets {
 
   static const String categoriesCategoriesCubit = 'lib/features/home/presentation/controller/categories/categories_cubit.dart';
   static const String categoriesCategoriesState = 'lib/features/home/presentation/controller/categories/categories_state.dart';
-  static const String coreWidgetsLoadingWidget = 'lib/core/widgets/loading_widget.dart~';
   static const String errorsFailure = 'lib/core/errors/failure.dart';
   static const String generatedAssets = 'lib/generated/assets.dart';
+  static const String imagesLogo = 'assets/images/logo.png';
+  static const String imagesNews = 'assets/images/news.png';
   static const String languageLanguageCubit = 'lib/features/search/presentation/controller/language/language_cubit.dart';
   static const String languageLanguageState = 'lib/features/search/presentation/controller/language/language_state.dart';
   static const String libMain = 'lib/main.dart';
   static const String lottieLoading = 'assets/lottie/loading.json';
   static const String modelsCategoryModel = 'lib/features/home/data/models/category_model.dart';
   static const String modelsTopHeadLineModel = 'lib/features/home/data/models/top_head_line_model.dart';
+  static const String newsAppYassinLibMain = 'lib/main.dart~';
   static const String reposSearchRepo = 'lib/features/search/data/repos/search_repo.dart';
   static const String reposSearchRepoImplementation = 'lib/features/search/data/repos/search_repo_implementation.dart';
   static const String routingAppRoutes = 'lib/core/routing/app_routes.dart';

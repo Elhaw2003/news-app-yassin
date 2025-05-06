@@ -16,15 +16,13 @@ void main() async {
     EasyLocalization(
         supportedLocales: const [Locale('en'), Locale('ar')],
         path: 'assets/translations', // <-- change the path of the translation files
-        fallbackLocale: const Locale('en'),
+        // fallbackLocale: const Locale('en'),
         startLocale:  Locale(LanguageConsts.currentLanguage),
         child:
              MultiBlocProvider(
                providers: [
                  BlocProvider(
                  create: (context) => TopHeadLinesCubit(topHeadLinesRepo: TopHeadLinesRepoImplementation())),
-                 BlocProvider(
-                 create: (context) => CategoriesCubit()),
                  BlocProvider(
                  create: (context) => LanguageCubit()),
                ],

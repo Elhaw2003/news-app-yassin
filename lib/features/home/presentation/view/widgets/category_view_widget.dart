@@ -12,16 +12,21 @@ class CategoryViewWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<CategoryModel> categories = [
-      CategoryModel(text: "sports"),
-      CategoryModel(text: "technology"),
-      CategoryModel(text: "business"),
-      CategoryModel(text: "entertainment"),
-    ];
-
+    // ✅ جعل BlocBuilder يعيد البناء عند تغيير اللغة
+    final locale = EasyLocalization.of(context)?.locale;
 
     return BlocBuilder<CategoriesCubit, CategoriesState>(
+      buildWhen: (previous, current) {
+        return true; // إعادة بناء الواجهة دائمًا عند أي تحديث
+      },
       builder: (context, state) {
+        List<CategoryModel> categories = [
+          CategoryModel(text: "sports"),
+          CategoryModel(text: "technology"),
+          CategoryModel(text: "business"),
+          CategoryModel(text: "entertainment"),
+        ];
+
         return SizedBox(
           height: 40.h,
           child: Padding(
@@ -33,11 +38,12 @@ class CategoryViewWidget extends StatelessWidget {
               itemBuilder: (context, index) {
                 return CategoryItemWidget(
                   index: index,
-                    onTap: () {
-                      BlocProvider.of<CategoriesCubit>(context).changeIndex(index);
-                      BlocProvider.of<TopHeadLinesCubit>(context).getTopHeadlines(category: categories[index].text,index: index);
-                    },
-                    text: categories[index].text
+                  onTap: () {
+                    BlocProvider.of<CategoriesCubit>(context).changeIndex(index);
+                    BlocProvider.of<TopHeadLinesCubit>(context)
+                        .getTopHeadlines(category: categories[index].text, index: index);
+                  },
+                  text: categories[index].text, // ✅ سيتم تحديث النصوص فور تغيير اللغة
                 );
               },
             ),
